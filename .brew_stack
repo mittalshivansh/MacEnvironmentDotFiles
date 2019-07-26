@@ -16,3 +16,10 @@ pip install awscli --upgrade
 
 #postgres install
 brew install postgres
+
+#pip get detaisl of all installed packages
+#pip freeze > requirements.txt
+#https://realpython.com/python-virtual-environments-a-primer/
+
+#https://github.com/rg3/youtube-dl
+brew install youtube-dl

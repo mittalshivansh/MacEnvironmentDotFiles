@@ -1,5 +1,5 @@
 #!/bin/sh
-#setting environmentto stop homebrew autoupdating each time when installing cask for this session only
+#setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 brew cask install java8
@@ -22,6 +22,7 @@ brew cask install pycharm-ce
 brew cask install intellij-idea
 
 brew cask install nvalt
+#many of my notes are on simplenote cloud.
 brew cask install simplenote
 brew cask install postman
 
@@ -36,6 +37,20 @@ brew cask install charles
 #for cleaning app caches and all junks of app, its a paid app
 #brew cask install cleanmymac
 
-brew cask install dash
+#I have license for dash 2 of abhishek sengar so download dash2.
+#brew cask install dash
+brew cask install dash2
 brew cask install alfred
 brew cask install visual-studio-code
+
+#for memoizing the knowledge, its the best research technique that should be incooperated in our learning process.
+brew cask install anki
+
+#join active dev community channels on slack for updates.
+brew cask install slack
+
+#better window management with mutple screens using keyboard shortcuts
+#brew cask install spectacle
+
+sudo xattr -d -r com.apple.quarantine /Applications/*
+
