@@ -2,7 +2,7 @@
 #setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-brew cask install java8
+brew cask install java
 
 brew cask install google-chrome
 
