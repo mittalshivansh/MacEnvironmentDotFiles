@@ -3,6 +3,9 @@
 brew install zsh zsh-completions
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# changing mac user login shell to zsh - currently not working
+# there must be another way to update environment variable SHELL that terminal windows use for starting shell
+# chsh -s /usr/local/bin/zsh
 
 
 

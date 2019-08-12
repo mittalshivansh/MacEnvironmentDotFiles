@@ -30,11 +30,12 @@ sudo chflags nohidden /Volumes
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
-# Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 4200
+# Set standby delay to 10 minutes (default is 1 hour)
+# sudo pmset -a standbydelay 600
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 25
+
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -61,6 +62,9 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+defaults write ~/Library/Preferences/com.apple.systemuiserver.plist menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/User.menu</string>'
+
 
 # Remove the sleep image file to save disk space
 #sudo rm /private/var/vm/sleepimage

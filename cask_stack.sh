@@ -49,8 +49,11 @@ brew cask install anki
 #join active dev community channels on slack for updates.
 brew cask install slack
 
+brew cask install skype
+
 #better window management with mutple screens using keyboard shortcuts
 #brew cask install spectacle
 
-sudo xattr -d -r com.apple.quarantine /Applications/*
+# disable system mac os syterm integrity protection to run this command
+# sudo xattr -d -r com.apple.quarantine /Applications/*
 
