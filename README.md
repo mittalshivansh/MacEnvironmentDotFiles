@@ -1,9 +1,10 @@
-# Mac-environement-Dot-Files-
+script to add /Users/shivanshmittal/Library/Android/sdk/platform-tools in shell path
+- add file creator header for android studio preference and vs code. script backing up studio and vs code configs. 
 
 ## How to get started
 * Login in to your apple id to get the scripts and backup configs in icloud drive
 * run sudo ./setup.sh, script should run with sudo access so that whole session gets sudo permissoion
-
+* when opening intellij ide's, give path to config files in this repo or cloud drive.
 
 ## Disable System Integrity Protection for acessing root restrcited usage in mac.
 
@@ -26,5 +27,10 @@
 
 ## TODOS ater setup
 * enable google calendar notifications visiting them.
+* [manual work list](pending_automation.md)
+* Go to purchased items list to restore apps on apple's app store.
 
 
+## Future Changes
+* Remember to update macos defaults script everytime u update any applicaiton default.
+* Keep updating brew packages everytime you install or uninstall the package/application.

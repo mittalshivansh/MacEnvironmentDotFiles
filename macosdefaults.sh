@@ -2,6 +2,7 @@
 #for macos bash is in bin
 ##!/usr/bin/bash
 # reference — https://mths.be/macos
+# TODO folow https://github.com/mathiasbynens/dotfiles/blob/master/.macos for more defaults and config
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -63,8 +64,24 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
-defaults write ~/Library/Preferences/com.apple.systemuiserver.plist menuExtras -array-add '<string>/System/Library/CoreServices/Menu Extras/User.menu</string>'
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
 
+for app in "Activity Monitor" \
+	"Address Book" \
+	"Calendar" \
+	"cfprefsd" \
+	"Contacts" \
+	"Dock" \
+	"Finder" \
+	"Google Chrome" \
+	"Photos" \
+	"Terminal"; do
+	killall "${app}" &> /dev/null
+done
+
+echo "Done. Note that some of these changes require a logout/restart to take effect."
 
 # Remove the sleep image file to save disk space
 #sudo rm /private/var/vm/sleepimage

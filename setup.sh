@@ -6,11 +6,14 @@
 
 sudo chmod -R 755 *
 
+# ./.brew
+# ./.brew_stack
+# ./cask_stack.sh
+# ./macosdefaults.sh
 
-./.brew
-./.brew_stack
-./cask_stack.sh
-./macosdefaults.sh
-
+source .brew
+source .brew_stack
+source cask_stack.sh
+source macosdefaults.sh
 
 

@@ -19,7 +19,7 @@ brew cask install android-studio
 brew cask install android-file-transfer
 
 brew cask install pycharm-ce
-brew cask install intellij-idea
+brew cask install intellij-idea-ce
 
 brew cask install nvalt
 #many of my notes are on simplenote cloud.

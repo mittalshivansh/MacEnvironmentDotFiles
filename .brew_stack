@@ -26,3 +26,5 @@ brew install postgres
 
 #https://github.com/rg3/youtube-dl
 brew install youtube-dl
+
+brew install node

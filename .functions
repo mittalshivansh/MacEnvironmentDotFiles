@@ -1,0 +1,28 @@
+#shell script functions
+
+
+#git-flow functions to automate git branching best practices(https://nvie.com/posts/a-successful-git-branching-model/)
+
+# creates newBranch for LiveLike android sdk based on issue number and description passed
+# support branch can be feature, bugfix, release and hotfix, so pass optional flags f, b, r or h
+fun branch(){
+	if [ $# -eq 3 ]; then
+		branch_name=$1/ANDSDK-$2/$3
+	else
+		branch_name=feature/ANDSDK-$1/$2
+	fi
+	echo $branch_name	
+	git checkout -b $branch_name origin/develop
+	git push -u origin $branch_name
+	# we need to set remote branching tracking by push to remote origin, 
+	# flags --track or --set-upstream-to are used to set tracking for existing remote branch to any local branch.
+	# also we can configure push.default git config that defines default beahviour where to push the branch.
+}
+
+# for now it prune remote and clean local branches which have been deleted (https://erikaybar.name/git-deleting-old-local-branches)
+fun cleanRepo(){
+	git remote prune origin
+	git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -d 
+	
+	# -d flag is safe delete for branches that will delete only merged branches even if branch is deleted on remote and not merged then this will not delete, use -D to force delete.
+}
