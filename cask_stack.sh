@@ -49,6 +49,9 @@ brew cask install anki
 #join active dev community channels on slack for updates.
 brew cask install slack
 
+# best wiki and journaling free cross-platform tool
+brew cask notion
+
 brew cask install skype
 
 #better window management with mutple screens using keyboard shortcuts
