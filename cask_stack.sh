@@ -2,13 +2,14 @@
 #setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-brew cask install java
+# java has been migrated from homebrew/cask to homebrew/core
+brew install java 
 
 brew cask install google-chrome
 
 brew cask install google-backup-and-sync
 
-brew cask install sublime
+brew cask install sublime-text
 
 brew cask install iterm2
 
@@ -18,7 +19,7 @@ brew cask install android-studio
 
 brew cask install android-file-transfer
 
-brew cask install pycharm-ce
+#brew cask install pycharm-ce
 brew cask install intellij-idea-ce
 
 brew cask install nvalt
@@ -26,7 +27,7 @@ brew cask install nvalt
 brew cask install simplenote
 brew cask install postman
 
-brew cask install vlc
+#brew cask install vlc
 
 #image annotating tool
 brew cask install skitch
