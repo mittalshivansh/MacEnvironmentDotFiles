@@ -51,7 +51,7 @@ brew cask install anki
 brew cask install slack
 
 # best wiki and journaling free cross-platform tool
-brew cask notion
+brew cask install notion
 
 brew cask install skype
 
