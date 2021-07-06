@@ -9,7 +9,7 @@ script to add /Users/shivanshmittal/Library/Android/sdk/platform-tools in shell 
 
 ## Disable System Integrity Protection for acessing root restrcited usage in mac.
 
-* Some programs make calls to the operating system which OSX began to see as a threat, beginning with El Capitan.
+* Some programs make calls to the operating system which OSX began to see as a threat, beginning with El Capitan, basically it is required to run below App translocation, might be it is not required in newer macos versions
 * Boot OS X into Recovery Mode: hold down the command + R keys
 * choose Terminal then type csrutil disable; reboot
 * csrutil enable;reboot to revert back to more secure mac.

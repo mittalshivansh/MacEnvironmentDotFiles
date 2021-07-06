@@ -14,7 +14,6 @@ sudo chmod -R 755 .
 
 source .brew
 source .brew_stack
-source cask_stack.sh
 source macosdefaults.sh
 
 

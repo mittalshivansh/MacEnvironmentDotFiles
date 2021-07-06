@@ -1,9 +1,5 @@
 #!/bin/sh
 
-#https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#step-2--install-zsh
-brew install zsh zsh-completions
-sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
-
 
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # changing mac user login shell to zsh - currently not working
@@ -31,3 +27,58 @@ brew install postgres
 brew install youtube-dl
 
 brew install node
+
+
+
+#setting environment to stop homebrew autoupdating each time when installing cask for this session only
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# java has been migrated from homebrew/cask to homebrew/core
+
+# no java cask have to install manual, also currentl android studio 4.2 comes with jdk 11 embedded into it, current latest is jdk 16, latest version might not be combatible with studio nad gradle
+
+    brew install --cask google-chrome 
+  	brew install --cask google-backup-and-sync 
+	 brew install --cask sublime-text
+	 brew install --cask iterm2
+ 	 brew install --cask sourcetree
+	brew install --cask android-studio 
+     brew install --cask android-file-transfer
+	#brew cask install pycharm-ce
+	brew install --cask  intellij-idea-ce 
+	  brew install --cask nvalt
+#many of my notes are on simplenote cloud.
+	  brew install --cask simplenote
+ 	  brew install --cask postman
+#brew cask install vlc
+#image annotating tool
+	  brew install --cask skitch
+#network proxy tool to record and monitor network activites
+ 	 brew install --cask charles
+#for cleaning app caches and all junks of app, its a paid app
+#brew cask install cleanmymac
+#I have license for dash 2 of abhishek sengar so download dash2.
+#brew cask install dash
+	   brew install --cask dash2
+	  brew install --cask alfred
+	  brew install --cask visual-studio-code
+#for memoizing the knowledge, its the best research technique that should be incooperated in our learning process.
+	  brew install --cask anki
+#join active dev community channels on slack for updates.
+	  brew install --cask slack
+# best wiki and journaling free cross-platform tool
+	  brew install --cask notion
+	  brew install --cask skype
+	  brew install --cask zoom
+
+#better window management with mutple screens using keyboard shortcuts
+#brew cask install spectacle
+
+# disable system mac os syterm integrity protection to run this command
+# sudo xattr -d -r com.apple.quarantine /Applications/*
+
+
+#https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#step-2--install-zsh
+brew install zsh zsh-completions
+sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
+
