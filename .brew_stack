@@ -79,6 +79,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 
 #https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#step-2--install-zsh
-brew install zsh zsh-completions
-sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
+#brew install zsh zsh-completions
+#sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
+# installing xsh from brew is messing up with lots of default settings
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
