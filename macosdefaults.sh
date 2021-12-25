@@ -64,6 +64,12 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
+# to turn off charger plugged in sound
+#defaults write com.apple.PowerChime ChimeOnNoHardware -bool true;killall PowerChime
+#to turn on 
+#defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
+
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
