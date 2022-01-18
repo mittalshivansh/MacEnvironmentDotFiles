@@ -33,10 +33,9 @@ brew install node
 #setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# java has been migrated from homebrew/cask to homebrew/core
-
-# no java cask have to install manual, also currentl android studio 4.2 comes with jdk 11 embedded into it, current latest is jdk 16, latest version might not be combatible with studio nad gradle
-
+    # all homebrew formulae and cask can be searched and explored here : https://formulae.brew.sh/
+    # for oracle latest java  use --cask oraclejdk, but for android openjdk is used, also now studio has embedded openjdk
+    brew install openjdk
     brew install --cask google-chrome 
   	brew install --cask google-backup-and-sync 
 	 brew install --cask sublime-text
@@ -83,4 +82,4 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
 # installing xsh from brew is messing up with lots of default settings
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
+# explore zsh plugins : https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins

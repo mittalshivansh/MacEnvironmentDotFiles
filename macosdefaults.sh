@@ -36,7 +36,8 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 25
-
+sudo pmset  standbydelay 600
+pmset disksleep 16 // to test the behaviour
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
