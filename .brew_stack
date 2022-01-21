@@ -6,8 +6,6 @@
 # there must be another way to update environment variable SHELL that terminal windows use for starting shell
 # chsh -s /usr/local/bin/zsh
 
-
-
 #python environment
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
@@ -15,6 +13,9 @@ rm get-pip.py
 
 # aws command line interface library
 pip install awscli --upgrade
+
+brew doctor
+brew tap homebrew/cask-versions
 
 #postgres install
 brew install postgres

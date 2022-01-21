@@ -6,6 +6,7 @@ script to add /Users/shivanshmittal/Library/Android/sdk/platform-tools in shell 
 * first install xcode-select --install or download from https://developer.apple.com/download/more/ to download git tool etc. 
 * run sudo ./setup.sh, script should run with sudo access so that whole session gets sudo permissoion
 * when opening intellij ide's, give path to config files in this repo or cloud drive.
+* zsh history config : https://unix.stackexchange.com/questions/21008/sharing-or-synchronizing-history-between-zsh-and-bash, https://gist.github.com/matthewmccullough/787142
 
 ## Disable System Integrity Protection for acessing root restrcited usage in mac.
 
