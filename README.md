@@ -28,8 +28,9 @@ script to add /Users/shivanshmittal/Library/Android/sdk/platform-tools in shell 
 
 
 ## TODOS ater setup
+* [manual steps list](pending_automation.md)
+* (very important as it will faster to do when setting up new mac next time)use diff command to get difference in settings and automate it by adding that command : https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
 * enable google calendar notifications visiting them.
-* [manual work list](pending_automation.md)
 * Go to purchased items list to restore apps on apple's app store.
 
 
