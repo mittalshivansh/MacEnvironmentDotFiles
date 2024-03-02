@@ -17,7 +17,8 @@ sudo -v
 
 
 # set google dns server to wifi dns settings
-networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
+# not working in agoda or corporate laptop, only run in personal laptop
+# networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
@@ -35,9 +36,13 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # sudo pmset -a standbydelay 600
 
 # Disable hibernation (speeds up entering sleep mode)
+# sudo pmset -a hibernatemode 3
+
 sudo pmset -a hibernatemode 25
-sudo pmset  standbydelay 600
-pmset disksleep 16 // to test the behaviour
+sudo pmset standbydelay 600
+sudo pmset disksleep 16 // to test the behaviour
+#would not require passord coming back from hibernation
+sudo pmset standby 0
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1

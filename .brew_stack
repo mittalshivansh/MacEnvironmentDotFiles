@@ -32,6 +32,7 @@ brew install node
 
 
 
+
 #setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
