@@ -1,40 +1,46 @@
+
+## How to Get Started
+
+1. **Login to Apple ID**: Access the scripts and backup configs in iCloud Drive.
+2. **Install Xcode Command Line Tools**: Run `xcode-select --install` or download from [Apple Developer](https://developer.apple.com/download/more/).
+3. **Check Brew Formulae**: Run `chmod +x check_casks.sh` and `./check_casks.sh` to check all available brew formulae from [Homebrew](https://formulae.brew.sh/).
+4. **Run Setup Scripts**:
+	- Run `sudo ./setup_step1.sh` (requires sudo access).
+	- Wait for the script to complete, follow any shell output instructions, then run `./setup_step2.sh`.
+5. **Configure IDEs**: When opening IntelliJ IDEs, provide the path to config files in this repo or cloud drive.
+6. **Zsh History Config**: Refer to [Unix StackExchange](https://unix.stackexchange.com/questions/21008/sharing-or-synchronizing-history-between-zsh-and-bash) and [Gist](https://gist.github.com/matthewmccullough/787142).
+
+## Final Steps
+
+- Install the dark solarized theme in iTerm.
+- Select the Mariana color scheme in Sublime Text.
+- Increase the default zoom level to 110% in Chrome browser settings.
+- Set the font size to 13 or 14 in your code editors and shells.
+
+## TODOs After Setup
+
+- Refer to the [manual steps list](pending_automation.md).
+- Use the `diff` command to identify differences in settings and automate them: [Pawel Grzybek's Guide](https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/).
+- Enable Google Calendar notifications.
+- Restore apps from the purchased items list in the Apple App Store.
+
 script to add /Users/shivanshmittal/Library/Android/sdk/platform-tools in shell path
-- add file creator header for android studio preference and vs code. script backing up studio and vs code configs. 
-
-## How to get started
-* Login in to your apple id to get the scripts and backup configs in icloud drive
-* first install xcode-select --install or download from https://developer.apple.com/download/more/ to download git tool etc. 
-* run chmod +x check_casks.sh and ./check_casks.sh to check all available brew formulae from https://formulae.brew.sh/
-* run sudo ./setup.sh, script should run with sudo access so that whole session gets sudo permissoion
-* when opening intellij ide's, give path to config files in this repo or cloud drive.
-* zsh history config : https://unix.stackexchange.com/questions/21008/sharing-or-synchronizing-history-between-zsh-and-bash, https://gist.github.com/matthewmccullough/787142
-
-## Disable System Integrity Protection for acessing root restrcited usage in mac.
-
-* Some programs make calls to the operating system which OSX began to see as a threat, beginning with El Capitan, basically it is required to run below App translocation, might be it is not required in newer macos versions
-* Boot OS X into Recovery Mode: hold down the command + R keys
-* choose Terminal then type csrutil disable; reboot
-* csrutil enable;reboot to revert back to more secure mac.
-
-### App translocation gotcha when installed from brew
-* For autoupdates to work in all apps via brew cask remember to remove apple quarantite flag for all applications by running -  sudo xattr -d -r com.apple.quarantine /Applications/*
-	* Apple add quarantite flag to all application downladed and moved using terminal coomand to applications folder, as we are installing app using brew so all application casks will e marked as quarantine and application will run from reaad only apptranslocation folder. so after installing application thriugh cask remmeber to clear qurantine flag which is automatically cleared when we move using finder on mac os. [link](https://lapcatsoftware.com/articles/app-translocation.html)
-
-## Last but not the least
-
-* don't forget to install dark solarized theme in iterm
-* don't forget to select mariana color scheme in sublime.
-* increase default zoom level to 110% in chrome browser settings
-* increase font size to 13 or 14 on your code editors and shells.
-
-
-## TODOS ater setup
-* [manual steps list](pending_automation.md)
-* (very important as it will faster to do when setting up new mac next time)use diff command to get difference in settings and automate it by adding that command : https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
-* enable google calendar notifications visiting them.
-* Go to purchased items list to restore apps on apple's app store.
-
+add file creator header for android studio preference and vs code. script backing up studio and vs code configs.
 
 ## Future Changes
-* Remember to update macos defaults script everytime u update any applicaiton default.
-* Keep updating brew packages everytime you install or uninstall the package/application.
+
+- Update the macOS defaults script whenever you change any application default settings.
+- Regularly update brew packages when installing or uninstalling applications.
+
+## This might not be valid anymore in new versions (to be checked and confirmed)
+
+### Disable System Integrity Protection to run below command related to quarantine flag 
+- Boot into Recovery Mode by restarting your Mac and holding down Command + R until the Apple logo appears.
+- Open Terminal and type `csrutil disable; reboot`.
+- To re-enable, type `csrutil enable; reboot`.
+
+### App Translocation Gotcha with Brew
+
+- Note : got cybersecurity escalation for running this command on corporate/office laptops, (only run it in personal laptop)
+- For auto-updates to work in all apps via brew cask, remove the Apple quarantine flag by running: `sudo xattr -d -r com.apple.quarantine /Applications/*`.
+- Apple adds a quarantine flag to all applications downloaded and moved using terminal commands. This flag is automatically cleared when moving applications using Finder. [More Info](https://lapcatsoftware.com/articles/app-translocation.html)

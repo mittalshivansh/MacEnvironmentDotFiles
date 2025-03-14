@@ -1,9 +1,8 @@
 #!/bin/bash 
 #for macos bash is in bin
 ##!/usr/bin/bash
-# reference — https://mths.be/macos
-# TODO folow https://github.com/mathiasbynens/dotfiles/blob/master/.macos for more defaults and config
-
+# Reference — https://mths.be/macos
+# TODO: Follow https://github.com/mathiasbynens/dotfiles/blob/master/.macos for more defaults and config
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
@@ -38,10 +37,11 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 # Disable hibernation (speeds up entering sleep mode)
 # sudo pmset -a hibernatemode 3
 
-sudo pmset -a hibernatemode 25
+# sudo pmset -a hibernatemode 25 #(hard disk sleep) for personal laptops
+sudo pmset -a hibernatemode 3 #(RAM sleep) for office laptops
 sudo pmset standbydelay 600
-sudo pmset disksleep 16 // to test the behaviour
-#would not require passord coming back from hibernation
+sudo pmset disksleep 16 #to test the behaviour
+#would not require password coming back from hibernation
 sudo pmset standby 0
 
 # Require password immediately after sleep or screen saver begins
@@ -92,6 +92,33 @@ for app in "Activity Monitor" \
 	"Terminal"; do
 	killall "${app}" &> /dev/null
 done
+
+
+# reference  : https://gist.github.com/llimllib/c4dd0a98a426022b0365d4c0a9090460
+
+defaults write com.apple.dock tilesize -int 41
+
+# Set the magnification to true
+defaults write com.apple.dock magnification -int 1
+
+# Show volume in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
+
+# Show Bluetooth in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
+
+# don't hide files
+defaults write com.apple.Finder AppleShowAllFiles true
+
+# Show the ~/Library folder
+chflags nohidden ~/Library
+
+# Show the /Volumes folder
+sudo chflags nohidden /Volumes
+
+# reboot systemUIServer and the dock to enable defaults to take effect
+killall -KILL Dock
+killall -KILL SystemUIServer
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 

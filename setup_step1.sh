@@ -8,8 +8,8 @@
 sudo chmod -R 755 . || { echo "Failed to change permissions"; exit 1; }
 
 # Source the scripts
-source ./.brew || { echo "Failed to source .brew"; exit 1; }
-source ./.brew_stack || { echo "Failed to source .brew_stack"; exit 1; }
 source ./macosdefaults.sh || { echo "Failed to source macosdefaults.sh"; exit 1; }
+source ./.brew || { echo "Failed to source .brew"; exit 1; }
+#after brew installation, the path is not set, so need to source the path
 
-echo "Setup complete."
+echo "Step 1 complete."
