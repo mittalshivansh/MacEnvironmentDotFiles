@@ -19,7 +19,7 @@ brew doctor
 brew tap homebrew/cask-versions
 
 #postgres install
-brew install postgres
+# brew install postgres, (2025) NOT available as a formula.
 
 #pip get detaisl of all installed packages
 #pip freeze > requirements.txt
@@ -30,7 +30,10 @@ brew install youtube-dl
 
 brew install node
 
+# Developer utils
 
+#https://github.com/AlDanial/cloc
+brew install cloc 
 
 
 #setting environment to stop homebrew autoupdating each time when installing cask for this session only
@@ -40,18 +43,23 @@ export HOMEBREW_NO_AUTO_UPDATE=1
     # for oracle latest java  use --cask oraclejdk, but for android openjdk is used, also now studio has embedded openjdk
     brew install openjdk
     brew install --cask google-chrome 
-  	brew install --cask google-backup-and-sync 
-	 brew install --cask sublime-text
-	 brew install --cask iterm2
- 	 brew install --cask sourcetree
-	brew install --cask android-studio 
-     brew install --cask android-file-transfer
-	#brew cask install pycharm-ce
-	brew install --cask  intellij-idea-ce 
-	  brew install --cask nvalt
+  	# brew install --cask google-backup-and-sync , it is not available in brew cask now 
+	brew install --cask sublime-text
+	brew install --cask iterm2
+ 	brew install --cask sourcetree
+    brew install --cask android-file-transfer
+	# brew install --cask android-studio 
+	# brew cask install pycharm-ce
+	# brew install --cask  intellij-idea-ce 
+	# (learned in 2024) now use jetbrains toolobox to manage all jetbrains ide and tools
+	brew install --cask jetbrains-toolbox
+	brew install --cask docker 
+	brew install --cask nvalt
+
 #many of my notes are on simplenote cloud.
 	  brew install --cask simplenote
  	  brew install --cask postman
+	  brew install --cask figma
 #brew cask install vlc
 #image annotating tool
 	  brew install --cask skitch
@@ -59,9 +67,9 @@ export HOMEBREW_NO_AUTO_UPDATE=1
  	 brew install --cask charles
 #for cleaning app caches and all junks of app, its a paid app
 #brew cask install cleanmymac
-#I have license for dash 2 of abhishek sengar so download dash2.
-#brew cask install dash
-	   brew install --cask dash2
+	#I have license for dash 2 of abhishek sengar so download dash2.
+	#brew cask install dash
+	#brew install --cask dash2 -> dash2 is not available in brew cask now(2024)
 	  brew install --cask alfred
 	  brew install --cask visual-studio-code
 #for memoizing the knowledge, its the best research technique that should be incooperated in our learning process.
@@ -72,6 +80,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 	  brew install --cask notion
 	  brew install --cask skype
 	  brew install --cask zoom
+
+	  brew install --cask spotify
 
 #better window management with mutple screens using keyboard shortcuts
 #brew cask install spectacle
