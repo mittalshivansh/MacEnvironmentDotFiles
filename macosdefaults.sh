@@ -15,8 +15,36 @@ sudo -v
 
 
 
+###############################################################################
+# Keyboard, trackpad, dockbar and menubar (important ones)                                                  #
+###############################################################################
+
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+defaults write -g com.apple.trackpad.scaling -float 1.5
+#manually set tap with one finger to click, not able to find accurate seetings key name.
+
+defaults write com.apple.dock tilesize -int 41
+defaults write com.apple.dock orientation -string "left"
+# Set the magnification to true
+defaults write com.apple.dock magnification -int 1
+
+# Show volume in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
+
+# Show Bluetooth in the menu bar
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
+
+
+# reboot systemUIServer and the dock to enable defaults to take effect
+killall -KILL Dock
+killall -KILL SystemUIServer
+
+
 # set google dns server to wifi dns settings
-# not working in agoda or corporate laptop, only run in personal laptop
+# not working in corporate laptop, only run in personal laptop
 # networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4
 
 # Always open everything in Finder's list view. This is important.
@@ -68,11 +96,6 @@ open "init/Solarized Dark.itermcolors"
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
-
 # to turn off charger plugged in sound
 #defaults write com.apple.PowerChime ChimeOnNoHardware -bool true;killall PowerChime
 #to turn on 
@@ -99,24 +122,7 @@ done
 
 # reference  : https://gist.github.com/llimllib/c4dd0a98a426022b0365d4c0a9090460
 
-defaults write -g com.apple.trackpad.scaling -float 1.5
-#manually set tap with one finger to click, not able to find accurate seetings key name.
 
-defaults write com.apple.dock tilesize -int 41
-defaults write com.apple.dock orientation -string "left"
-# Set the magnification to true
-defaults write com.apple.dock magnification -int 1
-
-# Show volume in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 0
-
-# Show Bluetooth in the menu bar
-defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
-
-
-# reboot systemUIServer and the dock to enable defaults to take effect
-killall -KILL Dock
-killall -KILL SystemUIServer
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
 
