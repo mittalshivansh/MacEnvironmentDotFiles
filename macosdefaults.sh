@@ -22,6 +22,9 @@ sudo -v
 # Always open everything in Finder's list view. This is important.
 defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
+# don't hide files
+defaults write com.apple.Finder AppleShowAllFiles true
+
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 # Show the /Volumes folder
@@ -96,8 +99,11 @@ done
 
 # reference  : https://gist.github.com/llimllib/c4dd0a98a426022b0365d4c0a9090460
 
-defaults write com.apple.dock tilesize -int 41
+defaults write -g com.apple.trackpad.scaling -float 1.5
+#manually set tap with one finger to click, not able to find accurate seetings key name.
 
+defaults write com.apple.dock tilesize -int 41
+defaults write com.apple.dock orientation -string "left"
 # Set the magnification to true
 defaults write com.apple.dock magnification -int 1
 
@@ -107,14 +113,6 @@ defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextr
 # Show Bluetooth in the menu bar
 defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.bluetooth" -int 0
 
-# don't hide files
-defaults write com.apple.Finder AppleShowAllFiles true
-
-# Show the ~/Library folder
-chflags nohidden ~/Library
-
-# Show the /Volumes folder
-sudo chflags nohidden /Volumes
 
 # reboot systemUIServer and the dock to enable defaults to take effect
 killall -KILL Dock

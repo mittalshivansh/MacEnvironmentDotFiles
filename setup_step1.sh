@@ -11,5 +11,8 @@ sudo chmod -R 755 . || { echo "Failed to change permissions"; exit 1; }
 source ./macosdefaults.sh || { echo "Failed to source macosdefaults.sh"; exit 1; }
 source ./.brew || { echo "Failed to source .brew"; exit 1; }
 #after brew installation, the path is not set, so need to source the path
+# add brew to path
+export PATH=/opt/homebrew/bin:$PATH
 
-echo "Step 1 complete."
+echo "Step 1 complete. check brew is in path and then proceed to step 2"
+echo "Run setup_step2.sh"
