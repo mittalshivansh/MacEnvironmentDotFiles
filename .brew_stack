@@ -1,13 +1,12 @@
 #!/bin/sh
 
-
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 # changing mac user login shell to zsh - currently not working
 # there must be another way to update environment variable SHELL that terminal windows use for starting shell
 # chsh -s /usr/local/bin/zsh
 
-#python environment
-#now pip is changed to pip3
+# python environment
+# now pip is changed to pip3
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py 
 rm get-pip.py
@@ -18,81 +17,80 @@ pip3 install awscli --upgrade
 brew doctor
 brew tap homebrew/cask-versions
 
-#postgres install
+# postgres install
 # brew install postgres, (2025) NOT available as a formula.
 
-#pip get detaisl of all installed packages
-#pip freeze > requirements.txt
-#https://realpython.com/python-virtual-environments-a-primer/
+# pip get details of all installed packages
+# pip freeze > requirements.txt
+# https://realpython.com/python-virtual-environments-a-primer/
 
-#https://github.com/rg3/youtube-dl
+# https://github.com/rg3/youtube-dl
 brew install youtube-dl
-
-brew install node
 
 # Developer utils
 
-#https://github.com/AlDanial/cloc
+# Github cli (also have copilot api inside it)
+brew install gh
+
+brew install node
+brew install git-lfs
+
+# https://github.com/AlDanial/cloc
 brew install cloc 
 
-
-#setting environment to stop homebrew autoupdating each time when installing cask for this session only
+# setting environment to stop homebrew autoupdating each time when installing cask for this session only
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-    # all homebrew formulae and cask can be searched and explored here : https://formulae.brew.sh/
-    # for oracle latest java  use --cask oraclejdk, but for android openjdk is used, also now studio has embedded openjdk
-    brew install openjdk
-    brew install --cask google-chrome 
-  	# brew install --cask google-backup-and-sync , it is not available in brew cask now 
-	brew install --cask sublime-text
-	brew install --cask iterm2
- 	brew install --cask sourcetree
-    brew install --cask android-file-transfer
-	# brew install --cask android-studio 
-	# brew cask install pycharm-ce
-	# brew install --cask  intellij-idea-ce 
-	# (learned in 2024) now use jetbrains toolobox to manage all jetbrains ide and tools
-	brew install --cask jetbrains-toolbox
-	brew install --cask docker 
-	brew install --cask nvalt
-
-#many of my notes are on simplenote cloud.
-	  brew install --cask simplenote
- 	  brew install --cask postman
-	  brew install --cask figma
-#brew cask install vlc
-#image annotating tool
-	  brew install --cask skitch
-#network proxy tool to record and monitor network activites
- 	 brew install --cask charles
-#for cleaning app caches and all junks of app, its a paid app
-#brew cask install cleanmymac
-	#I have license for dash 2 of abhishek sengar so download dash2.
-	#brew cask install dash
-	#brew install --cask dash2 -> dash2 is not available in brew cask now(2024)
-	  brew install --cask alfred
-	  brew install --cask visual-studio-code
-#for memoizing the knowledge, its the best research technique that should be incooperated in our learning process.
-	  brew install --cask anki
-#join active dev community channels on slack for updates.
-	  brew install --cask slack
+# all homebrew formulae and cask can be searched and explored here : https://formulae.brew.sh/
+# for oracle latest java  use --cask oraclejdk, but for android openjdk is used, also now studio has embedded openjdk
+brew install openjdk
+brew install --cask google-chrome 
+# brew install --cask google-backup-and-sync , it is not available in brew cask now 
+brew install --cask sublime-text
+brew install --cask iterm2
+brew install --cask sourcetree
+brew install --cask android-file-transfer
+# brew install --cask android-studio 
+# brew cask install pycharm-ce
+# brew install --cask intellij-idea-ce 
+# (learned in 2024) now use jetbrains toolobox to manage all jetbrains ide and tools
+brew install --cask jetbrains-toolbox
+brew install --cask docker 
+# many of my notes are on simplenote cloud.
+brew install --cask simplenote
+brew install --cask postman
+brew install --cask figma
+# brew cask install vlc
+# image annotating tool
+brew install --cask skitch
+# network proxy tool to record and monitor network activities
+brew install --cask charles
+# for cleaning app caches and all junks of app, its a paid app
+# brew cask install cleanmymac
+# I have license for dash 2 of abhishek sengar so download dash2.
+# brew cask install dash
+# brew install --cask dash2 -> dash2 is not available in brew cask now(2024)
+brew install --cask alfred
+brew install --cask visual-studio-code
+# for memoizing the knowledge, its the best research technique that should be incorporated in our learning process.
+brew install --cask anki
+# join active dev community channels on slack for updates.
+brew install --cask slack
 # best wiki and journaling free cross-platform tool
-	  brew install --cask notion
-	  brew install --cask skype
-	  brew install --cask zoom
+brew install --cask notion
+brew install --cask skype
+brew install --cask zoom
+brew install --cask spotify
 
-	  brew install --cask spotify
+# better window management with multiple screens using keyboard shortcuts
+# brew cask install spectacle
 
-#better window management with mutple screens using keyboard shortcuts
-#brew cask install spectacle
-
-# disable system mac os syterm integrity protection to run this command
+# disable system mac os system integrity protection to run this command
 # sudo xattr -d -r com.apple.quarantine /Applications/*
 
-
-#https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#step-2--install-zsh
-#brew install zsh zsh-completions
-#sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
+# https://gist.github.com/derhuerst/12a1558a4b408b3b2b6e#step-2--install-zsh
+# brew install zsh zsh-completions
+# sudo sh -c "echo $(which zsh) >> /etc/shells" && chsh -s $(which zsh)
 # installing xsh from brew is messing up with lots of default settings
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # explore zsh plugins : https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins

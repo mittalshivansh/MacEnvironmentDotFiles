@@ -34,6 +34,9 @@ formulae=(
     "postgres"
     "youtube-dl"
     "node"
+    # GitHub CLI (also have copilot api inside it)
+    # example usage gh copilot explain "sudo apt-get"
+    "gh"
 )
 
 # Check each cask

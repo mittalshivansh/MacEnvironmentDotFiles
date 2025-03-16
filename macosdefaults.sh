@@ -22,6 +22,8 @@ sudo -v
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
+# Use F1, F2, etc. as standard function keys
+defaults write NSGlobalDomain com.apple.keyboard.fnState -bool true
 
 defaults write -g com.apple.trackpad.scaling -float 1.5
 #manually set tap with one finger to click, not able to find accurate seetings key name.
