@@ -15,7 +15,8 @@
 - Install the dark solarized theme in iTerm.
 - Select the Mariana color scheme in Sublime Text.
 - Increase the default zoom level to 110% in Chrome browser settings.
-- Set the font size to 13 or 14 in your code editors and shells.
+- Set the font size to 13 or 14 in your code editors and shells, and mac os accessibility text size.
+- [update finder view options](images/Screenshot%202025-03-29%20at%206.03.47 PM.png)
 
 ## TODOs After Setup
 

@@ -3,6 +3,7 @@
 ##!/usr/bin/bash
 # Reference — https://mths.be/macos
 # TODO: Follow https://github.com/mathiasbynens/dotfiles/blob/master/.macos for more defaults and config
+# https://macos-defaults.com/ to learn more about the defaults CLI api
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
