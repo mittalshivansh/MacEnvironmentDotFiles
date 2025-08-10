@@ -65,6 +65,7 @@ brew install --cask figma
 brew install --cask skitch
 # network proxy tool to record and monitor network activities
 brew install --cask charles
+brew install --cask proxyman
 # for cleaning app caches and all junks of app, its a paid app
 # brew cask install cleanmymac
 # I have license for dash 2 of abhishek sengar so download dash2.
@@ -81,6 +82,9 @@ brew install --cask notion
 brew install --cask skype
 brew install --cask zoom
 brew install --cask spotify
+brew install --cask whatsapp
+
+brew install --cask skitch
 
 # better window management with multiple screens using keyboard shortcuts
 # brew cask install spectacle
@@ -94,3 +98,7 @@ brew install --cask spotify
 # installing xsh from brew is messing up with lots of default settings
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # explore zsh plugins : https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
+
+# AI tooling CLI
+npm install -g @anthropic-ai/claude-code
+npm install -g @google/gemini-cli
