@@ -105,6 +105,11 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 #defaults write com.apple.PowerChime ChimeOnAllHardware -bool true; open /System/Library/CoreServices/PowerChime.app &
 
 
+# Change screenshot location to ~/Downloads
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+# as JPEG is better than PNG and has smaller size
+defaults write com.apple.screencapture type jpg
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
